@@ -1,13 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Unbounded:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap");
 
 :root {
   color-scheme: dark;
-  --bg: #0a0b10;
-  --bg-2: #0f1626;
-  --text: #f5f6f8;
-  --muted: #b6bcc7;
-  --accent: #5ee7ff;
-  --glow: rgba(94, 231, 255, 0.22);
+  --bg: #0b0c0e;
+  --bg-2: #131416;
+  --text: #f2f2f2;
+  --muted: #a9adb3;
+  --line: rgba(255, 255, 255, 0.08);
 }
 
 * {
@@ -21,12 +20,12 @@ body {
   display: grid;
   place-items: center;
   background:
-    radial-gradient(650px 420px at 20% 15%, rgba(94, 231, 255, 0.08), transparent 60%),
-    radial-gradient(520px 380px at 80% 80%, rgba(84, 138, 255, 0.08), transparent 55%),
+    radial-gradient(520px 360px at 20% 20%, rgba(255, 255, 255, 0.05), transparent 60%),
+    radial-gradient(420px 320px at 80% 80%, rgba(255, 255, 255, 0.03), transparent 55%),
     linear-gradient(120deg, var(--bg), var(--bg-2));
   color: var(--text);
-  font-family: "Space Grotesk", system-ui, sans-serif;
-  letter-spacing: 0.01em;
+  font-family: "Manrope", system-ui, sans-serif;
+  letter-spacing: 0.005em;
 }
 
 body::after {
@@ -35,79 +34,47 @@ body::after {
   inset: 0;
   background-image: radial-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px);
   background-size: 22px 22px;
-  opacity: 0.35;
+  opacity: 0.18;
   pointer-events: none;
-  mix-blend-mode: screen;
+  mix-blend-mode: soft-light;
 }
 
 .shell {
   text-align: center;
-  padding: 48px 36px;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(9, 11, 18, 0.72);
+  padding: 56px 40px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: rgba(12, 12, 12, 0.7);
   box-shadow:
     0 0 45px rgba(0, 0, 0, 0.6),
-    0 0 80px var(--glow);
-  backdrop-filter: blur(16px);
-  max-width: 520px;
-  width: min(90vw, 520px);
+    0 0 50px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(18px);
+  max-width: 560px;
+  width: min(90vw, 560px);
 }
 
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  border-radius: 999px;
-  border: 1px solid rgba(94, 231, 255, 0.35);
-  color: var(--accent);
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-weight: 500;
-  font-family: "Unbounded", "Space Grotesk", sans-serif;
+.logo {
+  font-size: 1rem;
+  text-transform: lowercase;
+  letter-spacing: 0.35em;
+  font-weight: 600;
+  color: var(--text);
 }
 
 h1 {
-  margin-top: 20px;
-  font-size: clamp(2.1rem, 4vw, 3rem);
-  font-weight: 600;
-  font-family: "Unbounded", "Space Grotesk", sans-serif;
+  margin-top: 22px;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 500;
 }
 
 p {
-  margin-top: 14px;
-  font-size: 1.05rem;
+  margin-top: 12px;
+  font-size: 1.02rem;
   color: var(--muted);
-}
-
-.divider {
-  margin: 28px auto 20px;
-  width: 80px;
-  height: 2px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, transparent, var(--accent), transparent);
-  opacity: 0.8;
-}
-
-.footnote {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.85rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
 }
 
 @media (max-width: 520px) {
   .shell {
-    padding: 40px 26px;
-  }
-
-  .badge {
-    font-size: 0.75rem;
-  }
-
-  .footnote {
-    letter-spacing: 0.2em;
+    padding: 44px 26px;
   }
 }
