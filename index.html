@@ -3,15 +3,91 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Ramesh Labs — world models for robotics. Coming soon." />
-    <title>Ramesh Labs — Coming Soon</title>
+    <meta
+      name="description"
+      content="Ramesh Labs is building intelligent systems that learn to navigate the world, starting with CS:GO and extending to computer use and robotics."
+    />
+    <title>rameshlabs</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <main class="shell">
-      <div class="logo">rameshlabs</div>
-      <h1>Coming soon</h1>
-      <p>World models for robotics.</p>
-    </main>
+  <body class="site-home">
+    <div class="page">
+      <header class="site-header">
+        <a class="wordmark" href="./">rameshlabs</a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#writing">Writing</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero">
+          <p class="eyebrow">World Models for Robotics</p>
+          <h1>Training intelligence that can navigate the world.</h1>
+          <p class="lede">
+            Ramesh Labs is building AI that can perceive, reason, and act in
+            open-ended environments. We start with CS:GO, where navigation,
+            memory, coordination, and long-horizon decision-making can be
+            trained at scale. From there, we extend the same foundation to
+            computer use and, eventually, robotics.
+          </p>
+        </section>
+
+        <section class="trajectory" aria-label="Roadmap">
+          <article class="trajectory-item">
+            <p class="trajectory-step">01</p>
+            <h2>CS:GO</h2>
+            <p>
+              High-volume gameplay data, dense multimodal feedback, and fast
+              iteration on navigation and tactical behavior.
+            </p>
+          </article>
+          <article class="trajectory-item">
+            <p class="trajectory-step">02</p>
+            <h2>Computer Use</h2>
+            <p>
+              Move from simulated worlds to real interfaces where agents can
+              plan, operate tools, and recover from failure.
+            </p>
+          </article>
+          <article class="trajectory-item">
+            <p class="trajectory-step">03</p>
+            <h2>Robotics</h2>
+            <p>
+              Carry the same perception and action stack into the physical
+              world, where robust navigation matters most.
+            </p>
+          </article>
+        </section>
+
+        <section class="writing" id="writing">
+          <div class="section-head">
+            <p class="section-label">Writing</p>
+            <h2>Early notes from the data and training pipeline.</h2>
+          </div>
+
+          <a
+            class="post-card"
+            href="blog/generating-100k-hours-of-csgo-gameplay/"
+          >
+            <div class="post-media">
+              <img
+                src="assets/csgo-thumbnail.jpg"
+                alt="A CS:GO gameplay still rendered alongside distributed infrastructure tooling."
+              />
+            </div>
+            <div class="post-content">
+              <p class="post-meta">Blog 01</p>
+              <h3>Generating 100K hours of CS:GO gameplay</h3>
+              <p class="post-summary">
+                Rendering out 100K hours of multi-modal, multiplayer pro-level
+                gameplay matches cost effectively using distributed,
+                fault-tolerant (w/ retries) cloud infra.
+              </p>
+              <span class="post-status">Coming soon</span>
+            </div>
+          </a>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
